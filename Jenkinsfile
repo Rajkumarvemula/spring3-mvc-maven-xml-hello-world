@@ -8,10 +8,10 @@ node {
       // **       in the global configuration.           
       mvnHome = tool 'Maven'
       }
-   stage('Build') {
+   stage('Build'){
       // Run the maven build
      {
-         sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+         sh mvn install
      }
    }
    stage ('deploy'){
