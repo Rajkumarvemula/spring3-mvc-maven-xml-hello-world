@@ -11,7 +11,7 @@ node {
    }
    stage('Build') {
       // Run the maven buil
-      sh "'${mvnHome}/bin/mvn' clean package"
+      sh "mvn clean package"
       } 
    stage ('deploy'){
    echo 'deployment started'
