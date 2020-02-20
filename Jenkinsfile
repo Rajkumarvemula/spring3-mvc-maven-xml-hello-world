@@ -10,14 +10,9 @@ node {
      
    }
    stage('Build') {
-      // Run the maven build
-      if (isUnix()) {
-         sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
-      } else {
-      echo 'this is build maven artifact'
-         bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
-      }
-   }
+      // Run the maven buil
+      sh "'${mvnHome}/bin/mvn' clean package"
+      } 
    stage ('deploy'){
    echo 'deployment started'
        bat '''copy C:\\Users\\Madhu\\.jenkins\\workspace\\jmsth20-pipeline-tomcat\\target\\*.war F:\\softwares\\apache-tomcat-7.0.53\\webapps\\'''
