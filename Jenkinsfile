@@ -7,12 +7,11 @@ node {
       // ** NOTE: This 'M3' Maven tool must be configured
       // **       in the global configuration.           
       mvnHome = tool 'Maven'
-      }
    stage('Build'){
       // Run the maven build
-     {
+   {
          sh mvn install
-     }
+   }
    }
    stage ('deploy'){
    echo 'deployment started'
