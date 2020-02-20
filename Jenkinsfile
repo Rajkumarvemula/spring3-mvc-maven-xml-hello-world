@@ -15,7 +15,7 @@ node {
       } 
    stage ('copy war file to ansible server'){
    echo 'copying started'
-       sh "cp /var/lib/jenkins/workspace/EXAM-PIPELINE/target\*.war /root"
+       sh "cp /var/lib/jenkins/workspace/EXAM-PIPELINE/target/*.war /root"
    }  
    
 }
